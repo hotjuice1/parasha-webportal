@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 ФИНАЛЬНАЯ БОМБИЧЕСКАЯ СТРАНИЦА 🔥</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive, sans-serif;
+            background: 
+                radial-gradient(circle at 20% 50%, red 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, blue 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, yellow 0%, transparent 50%),
+                repeating-linear-gradient(
+                    45deg,
+                    #ff00ff,
+                    #ff00ff 5px,
+                    #00ffff 5px,
+                    #00ffff 10px,
+                    #ffff00 10px,
+                    #ffff00 15px
+                );
+            background-size: 200% 200%, 150% 150%, 300% 300%, 100% 100%;
+            animation: 
+                chaos 3s ease infinite,
+                shake 0.3s infinite,
+                spinBg 10s linear infinite;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        @keyframes chaos {
+            0%, 100% { background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%; }
+            25% { background-position: 100% 50%, 50% 100%, 25% 75%, 50% 50%; }
+            50% { background-position: 50% 100%, 100% 0%, 75% 25%, 100% 100%; }
+            75% { background-position: 25% 25%, 0% 50%, 100% 100%, 25% 75%; }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            10% { transform: translate(-10px, -5px) rotate(-1deg); }
+            20% { transform: translate(10px, 5px) rotate(1deg); }
+            30% { transform: translate(-5px, 10px) rotate(1deg); }
+            40% { transform: translate(5px, -10px) rotate(-1deg); }
+            50% { transform: translate(-10px, 5px) rotate(1deg); }
+            60% { transform: translate(10px, -5px) rotate(-1deg); }
+            70% { transform: translate(-5px, -10px) rotate(1deg); }
+            80% { transform: translate(5px, 10px) rotate(-1deg); }
+            90% { transform: translate(-10px, -5px) rotate(1deg); }
+        }
+        
+        @keyframes spinBg {
+            from { filter: hue-rotate(0deg); }
+            to { filter: hue-rotate(360deg); }
+        }
+        
+        .blink {
+            animation: blink 0.2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        
+        .mega-rotate {
+            animation: megaRotate 0.3s linear infinite;
+            display: inline-block;
+        }
+        
+        @keyframes megaRotate {
+            from { transform: rotate(0deg) scale(1); }
+            to { transform: rotate(360deg) scale(1.5); }
+        }
+        
+        .mega-bounce {
+            animation: megaBounce 0.2s infinite;
+        }
+        
+        @keyframes megaBounce {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+            25% { transform: translateY(-100px) translateX(50px) rotate(90deg); }
+            50% { transform: translateY(0) translateX(-50px) rotate(180deg); }
+            75% { transform: translateY(100px) translateX(50px) rotate(270deg); }
+        }
+        
+        .explode {
+            animation: explode 1s infinite;
+        }
+        
+        @keyframes explode {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(3) rotate(90deg); }
+            50% { transform: scale(0.5) rotate(180deg); }
+            75% { transform: scale(2.5) rotate(270deg); }
+        }
+        
+        .rainbow {
+            animation: rainbow 1s linear infinite;
+        }
+        
+        @keyframes rainbow {
+            0% { color: red; filter: hue-rotate(0deg); }
+            100% { color: red; filter: hue-rotate(360deg); }
+        }
+        
+        .wiggle-intense {
+            animation: wiggleIntense 0.1s infinite;
+        }
+        
+        @keyframes wiggleIntense {
+            0%, 100% { transform: rotate(0deg) translateX(0); }
+            10% { transform: rotate(-20deg) translateX(-20px); }
+            20% { transform: rotate(20deg) translateX(20px); }
+            30% { transform: rotate(-15deg) translateX(-15px); }
+            40% { transform: rotate(15deg) translateX(15px); }
+            50% { transform: rotate(-10deg) translateX(-10px); }
+            60% { transform: rotate(10deg) translateX(10px); }
+            70% { transform: rotate(-5deg) translateX(-5px); }
+            80% { transform: rotate(5deg) translateX(5px); }
+            90% { transform: rotate(-2deg) translateX(-2px); }
+        }
+        
+        .zoom-mad {
+            animation: zoomMad 0.5s infinite;
+        }
+        
+        @keyframes zoomMad {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(4); }
+            50% { transform: scale(0.3); }
+            75% { transform: scale(2.5); }
+        }
+        
+        .navigation {
+            background: 
+                linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red),
+                linear-gradient(-45deg, lime, cyan, magenta, yellow);
+            background-size: 400% 400%, 300% 300%;
+            animation: gradientShift 2s ease infinite, shake 0.3s infinite;
+            padding: 40px;
+            text-align: center;
+            border: 15px double yellow;
+            border-top: 20px ridge red;
+            border-bottom: 20px groove blue;
+            position: sticky;
+            top: 0;
+            z-index: 100000;
+            box-shadow: 0 0 50px rgba(255,0,0,0.8), 0 0 100px rgba(0,255,0,0.8);
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%, 0% 50%; }
+            50% { background-position: 100% 50%, 100% 50%; }
+        }
+        
+        .nav-link {
+            display: inline-block;
+            padding: 25px 50px;
+            margin: 0 15px;
+            background: black;
+            color: lime;
+            text-decoration: none;
+            font-size: 32px;
+            font-weight: 900;
+            border: 10px solid yellow;
+            text-transform: uppercase;
+            transition: all 0.1s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-link::before {
+            content: '🔥';
+            position: absolute;
+            left: -50px;
+            animation: slideFire 1s linear infinite;
+        }
+        
+        @keyframes slideFire {
+            from { left: -50px; }
+            to { left: 150px; }
+        }
+        
+        .nav-link:hover {
+            transform: rotate(720deg) scale(3);
+            background: white;
+            color: black;
+            filter: invert(1) hue-rotate(180deg);
+            border: 20px double red;
+        }
+        
+        header {
+            background: 
+                radial-gradient(circle, red, yellow, green, blue, purple),
+                linear-gradient(45deg, lime, cyan, magenta);
+            background-blend-mode: difference;
+            padding: 150px;
+            text-align: center;
+            border: 30px ridge gold;
+            position: relative;
+            overflow: hidden;
+            animation: headerPulse 2s infinite;
+        }
+        
+        @keyframes headerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        header::before,
+        header::after {
+            content: '⭐';
+            position: absolute;
+            font-size: 300px;
+            opacity: 0.5;
+            animation: megaRotate 1s linear infinite;
+        }
+        
+        header::before {
+            left: -100px;
+            top: -100px;
+        }
+        
+        header::after {
+            right: -100px;
+            bottom: -100px;
+            animation-direction: reverse;
+        }
+        
+        h1 {
+            font-size: 128px;
+            color: white;
+            text-shadow: 
+                20px 20px 0px black,
+                -20px -20px 0px red,
+                0 0 100px yellow,
+                0 0 200px lime;
+            text-transform: uppercase;
+            letter-spacing: 30px;
+            position: relative;
+            z-index: 1;
+            animation: textChaos 0.5s infinite;
+        }
+        
+        @keyframes textChaos {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(5deg) scale(1.2); }
+            50% { transform: rotate(-5deg) scale(0.8); }
+            75% { transform: rotate(3deg) scale(1.1); }
+        }
+        
+        .mega-announcement {
+            background: yellow;
+            color: red;
+            padding: 60px;
+            margin: 40px;
+            border: 25px groove purple;
+            font-size: 56px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 900;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mega-announcement::before {
+            content: '⚠️⚠️⚠️';
+            position: absolute;
+            left: -200px;
+            animation: scrollText 3s linear infinite;
+            font-size: 80px;
+        }
+        
+        @keyframes scrollText {
+            from { left: -200px; }
+            to { left: 2000px; }
+        }
+        
+        .content {
+            padding: 80px;
+            font-size: 32px;
+            line-height: 5;
+            color: white;
+            text-shadow: 
+                5px 5px 0px black,
+                -5px -5px 0px red,
+                0 0 20px yellow;
+            position: relative;
+        }
+        
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .counter-box {
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: gradientShift 2s ease infinite;
+            padding: 50px;
+            border: 20px double black;
+            text-align: center;
+            position: relative;
+        }
+        
+        .counter-box::before {
+            content: '💥';
+            position: absolute;
+            font-size: 100px;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: megaRotate 0.5s linear infinite;
+        }
+        
+        .counter-number {
+            font-size: 120px;
+            color: white;
+            text-shadow: 10px 10px 0px black;
+            font-weight: 900;
+        }
+        
+        .button-mega {
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+            background-size: 400% 400%;
+            animation: gradientShift 1s linear infinite;
+            padding: 50px 100px;
+            font-size: 48px;
+            border: 20px double black;
+            border-radius: 100px;
+            cursor: pointer;
+            margin: 30px;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: white;
+            text-shadow: 5px 5px 0px black;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .button-mega::before {
+            content: '🚀';
+            position: absolute;
+            font-size: 80px;
+            left: -100px;
+            animation: rocketFly 2s linear infinite;
+        }
+        
+        @keyframes rocketFly {
+            from { left: -100px; }
+            to { left: 150%; }
+        }
+        
+        .button-mega:hover {
+            transform: scale(3) rotate(1080deg);
+            filter: hue-rotate(180deg) invert(1);
+            border: 30px ridge gold;
+        }
+        
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: 
+                radial-gradient(circle, yellow, red, blue, green),
+                linear-gradient(45deg, lime, cyan);
+            background-blend-mode: multiply;
+            padding: 100px;
+            border: 30px ridge gold;
+            z-index: 999999;
+            font-size: 48px;
+            text-align: center;
+            box-shadow: 
+                0 0 100px rgba(255,0,0,1),
+                0 0 200px rgba(0,255,0,1),
+                0 0 300px rgba(0,0,255,1);
+            animation: modalPulse 0.5s infinite;
+            max-width: 90vw;
+        }
+        
+        @keyframes modalPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.2); }
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+            z-index: 999998;
+        }
+        
+        .floating-element {
+            position: fixed;
+            font-size: 100px;
+            pointer-events: none;
+            z-index: 999997;
+            animation: floatAway 3s forwards;
+        }
+        
+        @keyframes floatAway {
+            from {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-500px) rotate(720deg) scale(3);
+                opacity: 0;
+            }
+        }
+        
+        .cursor-custom {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><circle cx="25" cy="25" r="20" fill="red"/><text x="15" y="30" font-size="20">💥</text></svg>'), auto !important;
+        }
+        
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999996;
+            opacity: 0.3;
+        }
+        
+        .scrolling-banner-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: red;
+            color: yellow;
+            padding: 30px;
+            font-size: 36px;
+            text-align: center;
+            z-index: 100001;
+            border-bottom: 10px solid yellow;
+            animation: blink 0.5s infinite;
+        }
+        
+        .scrolling-banner-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: blue;
+            color: lime;
+            padding: 30px;
+            font-size: 36px;
+            text-align: center;
+            z-index: 100001;
+            border-top: 10px solid lime;
+            animation: blink 0.5s infinite;
+        }
+        
+        .gallery-mega {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 80px 0;
+        }
+        
+        .gallery-item-mega {
+            width: 300px;
+            height: 300px;
+            border: 20px ridge cyan;
+            background: linear-gradient(45deg, pink, orange, yellow, green, blue, purple);
+            background-size: 400% 400%;
+            animation: gradientShift 2s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            text-shadow: 5px 5px 0px black;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-item-mega::before {
+            content: '💥';
+            position: absolute;
+            font-size: 200px;
+            animation: megaRotate 0.3s linear infinite;
+        }
+        
+        .spinning-text {
+            display: inline-block;
+            animation: megaRotate 0.5s linear infinite;
+        }
+    </style>
+</head>
+<body class="cursor-custom">
+    <div class="scrolling-banner-top">
+        🚨 ФИНАЛЬНАЯ БОМБИЧЕСКАЯ СТРАНИЦА! САМАЯ КРУТАЯ! САМАЯ БЕЗУМНАЯ! 🚨
+    </div>
+    
+    <div class="scrolling-banner-bottom">
+        ⚡ ВНИМАНИЕ! ЭТО ФИНАЛ! ВСЁ САМОЕ ЛУЧШЕЕ И ХУДШЕЕ ЗДЕСЬ! ⚡
+    </div>
+    
+    <div class="navigation">
+        <a href="1.html" class="nav-link blink">ГЛАВНАЯ</a>
+        <a href="2.html" class="nav-link explode">СТРАНИЦА 2</a>
+        <a href="3.html" class="nav-link mega-bounce">ФИНАЛ!</a>
+    </div>
+    
+    <header>
+        <h1 class="mega-bounce blink rainbow">
+            <span class="mega-rotate">🔥</span>
+            ФИНАЛЬНАЯ
+            <span class="explode">💥</span>
+            БОМБИЧЕСКАЯ
+            <span class="mega-rotate">🔥</span>
+            СТРАНИЦА!
+            <span class="explode">💥</span>
+        </h1>
+        <p style="font-size: 64px; color: white; text-shadow: 5px 5px 0px black; margin-top: 50px;" class="wiggle-intense">
+            ЭТО ПИК БЕЗУМИЯ! ЭТО АПОГЕЙ ГОВНОСАЙТА!
+        </p>
+    </header>
+    
+    <div class="mega-announcement zoom-mad blink">
+        <div class="spinning-text">⚠️</div>
+        ТОЛЬКО ЗДЕСЬ! ТОЛЬКО СЕЙЧАС! ВСЁ СРАЗУ!
+        <div class="spinning-text">⚠️</div>
+    </div>
+    
+    <div class="content">
+        <p class="mega-bounce">Это самая мощная страница!</p>
+        <p class="explode">Всё здесь двигается!</p>
+        <p class="wiggle-intense">Все элементы живые!</p>
+        <p class="zoom-mad">Ничего не стоит на месте!</p>
+        
+        <div class="counter-grid">
+            <div class="counter-box explode">
+                <div class="counter-number" id="counter1">0</div>
+                <div style="font-size: 32px; color: white; margin-top: 20px; text-shadow: 3px 3px 0px black;">СЧЁТЧИК 1</div>
+            </div>
+            <div class="counter-box mega-bounce">
+                <div class="counter-number" id="counter2">0</div>
+                <div style="font-size: 32px; color: white; margin-top: 20px; text-shadow: 3px 3px 0px black;">СЧЁТЧИК 2</div>
+            </div>
+            <div class="counter-box zoom-mad">
+                <div class="counter-number" id="counter3">0</div>
+                <div style="font-size: 32px; color: white; margin-top: 20px; text-shadow: 3px 3px 0px black;">СЧЁТЧИК 3</div>
+            </div>
+            <div class="counter-box mega-rotate">
+                <div class="counter-number" id="counter4">0</div>
+                <div style="font-size: 32px; color: white; margin-top: 20px; text-shadow: 3px 3px 0px black;">СЧЁТЧИК 4</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 80px 0;">
+            <button class="button-mega mega-bounce" onclick="megaClick()">
+                🔥 МЕГА КНОПКА! 🔥
+            </button>
+            <button class="button-mega explode" onclick="showMegaModal()">
+                💥 ВСПЛЫВАШКА! 💥
+            </button>
+            <button class="button-mega zoom-mad" onclick="createChaos()">
+                ⚡ ХАОС! ⚡
+            </button>
+        </div>
+        
+        <div class="gallery-mega">
+            <div class="gallery-item-mega mega-rotate">1</div>
+            <div class="gallery-item-mega explode">2</div>
+            <div class="gallery-item-mega mega-bounce">3</div>
+            <div class="gallery-item-mega zoom-mad">4</div>
+            <div class="gallery-item-mega wiggle-intense">5</div>
+            <div class="gallery-item-mega mega-rotate">6</div>
+        </div>
+        
+        <div style="background: black; padding: 80px; margin: 80px 0; border: 30px double lime;" class="blink">
+            <h2 style="font-size: 96px; color: lime; text-align: center; margin-bottom: 50px;" class="mega-bounce">
+                🏆 ФИНАЛЬНЫЙ БЛОК! 🏆
+            </h2>
+            <p style="font-size: 48px; color: yellow; text-align: center; line-height: 2;" class="wiggle-intense">
+                Вы дошли до конца!<br>
+                Это была самая безумная страница!<br>
+                Поздравляем с выживанием! 🎉
+            </p>
+        </div>
+        
+        <div style="height: 300vh; background: repeating-linear-gradient(
+            0deg,
+            red 0px, red 50px,
+            orange 50px, orange 100px,
+            yellow 100px, yellow 150px,
+            green 150px, green 200px,
+            blue 200px, blue 250px,
+            indigo 250px, indigo 300px,
+            violet 300px, violet 350px
+        ); padding: 100px; text-align: center; position: relative;">
+            <h1 style="font-size: 200px; color: white; text-shadow: 20px 20px 0px black; position: sticky; top: 50%; transform: translateY(-50%);" class="mega-bounce blink">
+                🎊 КОНЕЦ! 🎊
+            </h1>
+        </div>
+    </div>
+    
+    <div id="megaModal" class="modal" style="display: none;">
+        <h2 class="mega-bounce blink" style="font-size: 72px; margin-bottom: 40px;">
+            🎉 ПОЗДРАВЛЯЮ! 🎉
+        </h2>
+        <p style="font-size: 48px; margin-bottom: 40px;" class="wiggle-intense">
+            ВЫ НАЖАЛИ НА МЕГА КНОПКУ!
+        </p>
+        <p style="font-size: 36px; margin-bottom: 40px;" class="explode">
+            Это был правильный выбор!
+        </p>
+        <button class="button-mega" onclick="closeMegaModal()">ЗАКРЫТЬ ВСЁ!</button>
+    </div>
+    
+    <script>
+        let counters = [0, 0, 0, 0];
+        
+        // Множество счётчиков
+        setInterval(() => {
+            counters = counters.map((c, i) => {
+                const newVal = c + (i + 1) * 10;
+                document.getElementById(`counter${i + 1}`).textContent = newVal;
+                document.getElementById(`counter${i + 1}`).style.transform = 
+                    `rotate(${newVal * 5}deg) scale(${1 + Math.sin(newVal / 10) * 0.5})`;
+                return newVal;
+            });
+        }, 50);
+        
+        function megaClick() {
+            alert('💥 МЕГА КНОПКА АКТИВИРОВАНА! 💥\n\nСистема перегружена!\nВсе эффекты усилены!');
+            
+            // Создаём максимум хаоса
+            for (let i = 0; i < 100; i++) {
+                createConfetti();
+                setTimeout(() => createConfetti(), i * 10);
+            }
+            
+            // Меняем всё
+            document.body.style.filter = `hue-rotate(${Math.random() * 360}deg) invert(${Math.random()})`;
+            
+            // Создаём плавающие элементы
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => createFloatingElement(), i * 100);
+            }
+        }
+        
+        function showMegaModal() {
+            const modal = document.getElementById('megaModal');
+            modal.style.display = 'block';
+            
+            // Автоматически закрывается через 10 секунд
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 10000);
+            
+            // Создаём конфетти
+            for (let i = 0; i < 50; i++) {
+                createConfetti();
+            }
+        }
+        
+        function closeMegaModal() {
+            document.getElementById('megaModal').style.display = 'none';
+            for (let i = 0; i < 30; i++) {
+                createConfetti();
+            }
+        }
+        
+        function createChaos() {
+            alert('⚡ ХАОС АКТИВИРОВАН! ⚡\n\nВсё теперь движется еще быстрее!');
+            
+            // Усиливаем все анимации
+            document.querySelectorAll('*').forEach(el => {
+                el.style.animationDuration = '0.1s';
+            });
+            
+            // Создаём максимум элементов
+            for (let i = 0; i < 200; i++) {
+                setTimeout(() => {
+                    createConfetti();
+                    createFloatingElement();
+                }, i * 20);
+            }
+            
+            // Меняем цвет всего
+            setInterval(() => {
+                document.body.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+            }, 100);
+        }
+        
+        function createConfetti() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.left = Math.random() * window.innerWidth + 'px';
+            confetti.style.top = Math.random() * window.innerHeight + 'px';
+            confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0%';
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+            document.body.appendChild(confetti);
+            
+            const targetX = Math.random() * window.innerWidth;
+            const targetY = window.innerHeight + 100;
+            const duration = 2000 + Math.random() * 2000;
+            
+            setTimeout(() => {
+                confetti.style.transition = `all ${duration}ms ease-out`;
+                confetti.style.left = targetX + 'px';
+                confetti.style.top = targetY + 'px';
+                confetti.style.transform = `rotate(${Math.random() * 720}deg) scale(0)`;
+                confetti.style.opacity = '0';
+                setTimeout(() => confetti.remove(), duration);
+            }, 10);
+        }
+        
+        function createFloatingElement() {
+            const emojis = ['🎉', '💥', '🔥', '⚡', '✨', '🌟', '🎊', '💫', '🚀', '⭐'];
+            const floating = document.createElement('div');
+            floating.className = 'floating-element';
+            floating.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            floating.style.left = Math.random() * window.innerWidth + 'px';
+            floating.style.top = window.innerHeight + 'px';
+            floating.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            document.body.appendChild(floating);
+            
+            setTimeout(() => floating.remove(), 3000);
+        }
+        
+        // Постоянный конфетти
+        setInterval(() => {
+            createConfetti();
+        }, 100);
+        
+        // Постоянные плавающие элементы
+        setInterval(() => {
+            createFloatingElement();
+        }, 500);
+        
+        // Клик создаёт максимум эффектов
+        document.addEventListener('click', (e) => {
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                    confetti.style.left = e.clientX + 'px';
+                    confetti.style.top = e.clientY + 'px';
+                    confetti.style.borderRadius = '50%';
+                    document.body.appendChild(confetti);
+                    
+                    const angle = (Math.PI * 2 * i) / 20;
+                    const distance = 200;
+                    const targetX = e.clientX + Math.cos(angle) * distance;
+                    const targetY = e.clientY + Math.sin(angle) * distance;
+                    
+                    setTimeout(() => {
+                        confetti.style.transition = 'all 1s';
+                        confetti.style.left = targetX + 'px';
+                        confetti.style.top = targetY + 'px';
+                        confetti.style.opacity = '0';
+                        confetti.style.transform = 'scale(3)';
+                        setTimeout(() => confetti.remove(), 1000);
+                    }, 10);
+                }, i * 20);
+            }
+            
+            createFloatingElement();
+        });
+        
+        // Движение мыши меняет всё
+        let mouseX = 0;
+        let mouseY = 0;
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            const hue = (mouseX / window.innerWidth) * 360;
+            const sat = 50 + (mouseY / window.innerHeight) * 50;
+            document.body.style.filter = `hue-rotate(${hue}deg) saturate(${sat}%)`;
+        });
+        
+        // Периодические модальные окна
+        let modalCount = 0;
+        setInterval(() => {
+            modalCount++;
+            if (modalCount % 30 === 0 && document.getElementById('megaModal').style.display === 'none') {
+                const messages = [
+                    '🎉 ВАУ! ВЫ ВСЁ ЕЩЁ ЗДЕСЬ! 🎉',
+                    '💥 ЭТО НЕ КОНЕЦ! 💥',
+                    '🔥 БЕЗУМИЕ ПРОДОЛЖАЕТСЯ! 🔥',
+                    '⚡ НЕ УХОДИТЕ! ⚡'
+                ];
+                alert(messages[Math.floor(Math.random() * messages.length)]);
+            }
+        }, 1000);
+        
+        // Автоматическое создание элементов при скролле
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY - lastScroll > 200) {
+                for (let i = 0; i < 10; i++) {
+                    createConfetti();
+                }
+                lastScroll = window.scrollY;
+            }
+        });
+        
+        // Консольные сообщения
+        console.log('%c🔥🔥🔥 ФИНАЛЬНАЯ СТРАНИЦА ЗАГРУЖЕНА! 🔥🔥🔥', 'font-size: 50px; color: red; font-weight: 900;');
+        console.log('%cЭто самая безумная страница!', 'font-size: 30px; color: orange;');
+        console.log('%cВсё двигается! Всё мигает! Всё взрывается!', 'font-size: 20px; color: yellow;');
+        console.log('%c...и это хорошо! 😄💥🔥', 'font-size: 16px; color: lime;');
+        
+        // Приветственное сообщение
+        setTimeout(() => {
+            alert('🎊 Добро пожаловать на ФИНАЛЬНУЮ БОМБИЧЕСКУЮ СТРАНИЦУ! 🎊\n\nЗдесь всё максимально безумно!\nПриготовьтесь к хаосу!');
+        }, 1000);
+    </script>
+</body>
+</html>
+

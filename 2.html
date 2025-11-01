@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТРАНИЦА 2 - ЛУЧШАЯ ВСЕГДА!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive, sans-serif;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff0000,
+                #ff0000 10px,
+                #0000ff 10px,
+                #0000ff 20px,
+                #ffff00 20px,
+                #ffff00 30px
+            );
+            overflow-x: hidden;
+            min-height: 100vh;
+            animation: shake 0.5s infinite;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        .blink {
+            animation: blink 0.3s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .rotate {
+            animation: rotate 0.5s linear infinite;
+            display: inline-block;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .bounce {
+            animation: bounce 0.3s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-50px) scale(1.5); }
+        }
+        
+        .pulse {
+            animation: pulse 0.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        .wave {
+            animation: wave 1s ease-in-out infinite;
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(20deg); }
+            75% { transform: rotate(-20deg); }
+        }
+        
+        .zoom {
+            animation: zoom 1s infinite;
+        }
+        
+        @keyframes zoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(2); }
+        }
+        
+        header {
+            background: radial-gradient(circle, red, yellow, green, blue, purple);
+            padding: 100px;
+            text-align: center;
+            border: 20px double orange;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '⭐';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.3;
+            animation: rotate 2s linear infinite;
+        }
+        
+        h1 {
+            font-size: 96px;
+            color: white;
+            text-shadow: 
+                10px 10px 0px black,
+                -10px -10px 0px red,
+                0 0 50px yellow;
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .navigation {
+            background: linear-gradient(to right, lime, cyan, magenta, yellow);
+            padding: 30px;
+            text-align: center;
+            border-top: 10px solid red;
+            border-bottom: 10px solid blue;
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+        }
+        
+        .nav-link {
+            display: inline-block;
+            padding: 20px 40px;
+            margin: 0 10px;
+            background: black;
+            color: lime;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+            border: 5px solid yellow;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            transform: rotate(360deg) scale(2);
+            background: white;
+            color: black;
+            filter: invert(1);
+        }
+        
+        .content {
+            padding: 50px;
+            font-size: 24px;
+            line-height: 4;
+            color: white;
+            text-shadow: 3px 3px 0px black, -3px -3px 0px red;
+        }
+        
+        .announcement {
+            background: yellow;
+            color: red;
+            padding: 40px;
+            margin: 30px 0;
+            border: 15px groove purple;
+            font-size: 32px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px 0;
+        }
+        
+        .gallery-item {
+            width: 250px;
+            height: 250px;
+            border: 10px ridge cyan;
+            background: linear-gradient(45deg, pink, orange, yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: blue;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-item::before {
+            content: '💥';
+            position: absolute;
+            font-size: 100px;
+            animation: rotate 1s linear infinite;
+        }
+        
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            margin: 50px;
+            border: 20px dashed red;
+            border-radius: 100px;
+        }
+        
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 30px;
+            margin: 20px 0;
+            font-size: 28px;
+            background: yellow;
+            color: red;
+            border: 10px solid blue;
+            font-family: 'Comic Neue', cursive;
+        }
+        
+        .form-container button {
+            width: 100%;
+            padding: 50px;
+            font-size: 48px;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            border: 15px double black;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+        
+        .form-container button:hover {
+            animation: bounce 0.3s infinite;
+            filter: hue-rotate(180deg);
+        }
+        
+        .timer {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: black;
+            color: lime;
+            padding: 30px;
+            border: 10px solid red;
+            font-size: 48px;
+            font-weight: bold;
+            z-index: 9999;
+            text-align: center;
+        }
+        
+        .floating-text {
+            position: fixed;
+            font-size: 72px;
+            color: red;
+            font-weight: bold;
+            text-shadow: 5px 5px 0px black;
+            z-index: 9998;
+            pointer-events: none;
+        }
+        
+        .counter-display {
+            background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+            padding: 60px;
+            text-align: center;
+            margin: 50px 0;
+            border: 25px ridge gold;
+        }
+        
+        .counter-display h2 {
+            font-size: 64px;
+            color: white;
+            text-shadow: 5px 5px 0px black;
+            margin-bottom: 30px;
+        }
+        
+        .counter-number {
+            font-size: 200px;
+            color: black;
+            text-shadow: 
+                10px 10px 0px white,
+                -10px -10px 0px red;
+            font-weight: bold;
+        }
+        
+        .emoji-rain {
+            position: fixed;
+            font-size: 30px;
+            pointer-events: none;
+            z-index: 9997;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: gold;
+            color: black;
+            padding: 20px 40px;
+            border: 8px solid black;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+            transform: rotate(-15deg);
+            box-shadow: 10px 10px 0px red;
+        }
+        
+        .blinking-border {
+            animation: borderBlink 1s infinite;
+        }
+        
+        @keyframes borderBlink {
+            0%, 50% { border-color: red; }
+            51%, 100% { border-color: blue; }
+        }
+        
+        .scrolling-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: red;
+            color: yellow;
+            padding: 25px;
+            font-size: 28px;
+            text-align: center;
+            z-index: 10000;
+            border-top: 10px solid yellow;
+        }
+        
+        .scrolling-banner-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scrollRight 15s linear infinite;
+        }
+        
+        @keyframes scrollRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="1.html" class="nav-link blink">ГЛАВНАЯ</a>
+        <a href="2.html" class="nav-link pulse">СТРАНИЦА 2</a>
+        <a href="3.html" class="nav-link wave">ФИНАЛ!</a>
+    </div>
+    
+    <div class="timer" id="timer">
+        <div>⏰ ВРЕМЯ:</div>
+        <div id="time">00:00</div>
+    </div>
+    
+    <header>
+        <h1 class="bounce pulse">
+            <span class="rotate">🚀</span>
+            ВТОРАЯ СТРАНИЦА
+            <span class="rotate">🚀</span>
+        </h1>
+        <p style="font-size: 36px; color: white; text-shadow: 3px 3px 0px black; margin-top: 30px;">
+            ЕЩЁ ЛУЧШЕ! ЕЩЁ КРУЧЕ! ЕЩЁ БЕЗУМНЕЕ!
+        </p>
+    </header>
+    
+    <div class="announcement blink zoom">
+        ⚡ ВНИМАНИЕ! ВЫ НА САМОЙ ВАЖНОЙ СТРАНИЦЕ ВСЕГО ИНТЕРНЕТА! ⚡
+    </div>
+    
+    <div class="content">
+        <p class="bounce">Здесь собраны ВСЕ лучшие функции!</p>
+        <p class="pulse">Нигде больше такого нет!</p>
+        <p class="wave">Только у нас! Эксклюзивно!</p>
+        
+        <div class="counter-display">
+            <h2 class="blink">ВАШ СЧЁТ:</h2>
+            <div class="counter-number" id="bigCounter">0</div>
+            <button class="badge zoom" onclick="incrementBigCounter()">+1000 ОЧКОВ!</button>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item pulse">1</div>
+            <div class="gallery-item zoom">2</div>
+            <div class="gallery-item wave">3</div>
+            <div class="gallery-item bounce">4</div>
+            <div class="gallery-item rotate">5</div>
+            <div class="gallery-item blink">6</div>
+        </div>
+        
+        <div class="form-container blinking-border">
+            <h2 style="font-size: 48px; color: red; text-align: center; margin-bottom: 30px;" class="bounce">
+                ЗАПОЛНИТЕ ФОРМУ!
+            </h2>
+            <input type="text" placeholder="Ваше имя" class="pulse" onfocus="this.style.background='lime'; this.style.transform='scale(1.5)'" onblur="this.style.background='yellow'; this.style.transform='scale(1)'">
+            <input type="email" placeholder="Email (не обязательно)" class="wave">
+            <input type="tel" placeholder="Телефон" class="zoom">
+            <textarea rows="5" placeholder="Ваше сообщение" class="bounce"></textarea>
+            <button onclick="submitForm()">ОТПРАВИТЬ ВСЁ!</button>
+        </div>
+        
+        <div style="text-align: center; margin: 50px 0;">
+            <span class="badge rotate">ЛУЧШИЙ</span>
+            <span class="badge pulse">САЙТ</span>
+            <span class="badge zoom">2024</span>
+            <span class="badge wave">ГОДА!</span>
+        </div>
+        
+        <div style="background: black; padding: 40px; margin: 50px 0; border: 15px solid lime;">
+            <h2 style="font-size: 56px; color: lime; text-align: center; margin-bottom: 30px;" class="blink">
+                СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ!
+            </h2>
+            <p style="font-size: 32px; color: yellow; text-align: center; line-height: 2;">
+                Если вы дочитали до этого места, вы получили особую награду! 🏆<br>
+                Прокрутите страницу вниз для сюрприза! 🎁
+            </p>
+        </div>
+        
+        <div style="height: 200vh; background: repeating-linear-gradient(90deg, 
+            #ff0000 0px, #ff0000 50px,
+            #00ff00 50px, #00ff00 100px,
+            #0000ff 100px, #0000ff 150px
+        ); padding: 100px; text-align: center;">
+            <h1 style="font-size: 128px; color: white; text-shadow: 10px 10px 0px black;" class="bounce pulse">
+                🎉 СЮРПРИЗ! 🎉
+            </h1>
+            <p style="font-size: 64px; color: yellow; margin-top: 50px;" class="blink">
+                ВЫ ДОЧИТАЛИ!
+            </p>
+            <p style="font-size: 48px; color: lime; margin-top: 30px;">
+                Но это был не настоящий сюрприз 😏
+            </p>
+        </div>
+    </div>
+    
+    <div class="scrolling-banner">
+        <div class="scrolling-banner-content">
+            🎊 Спасибо за посещение нашего говносайта! 🎊 Не забудьте добавить в закладки! 🎊 Расскажите друзьям! 🎊
+        </div>
+    </div>
+    
+    <script>
+        let bigCounter = 0;
+        let timeSeconds = 0;
+        
+        // Таймер
+        setInterval(() => {
+            timeSeconds++;
+            const minutes = Math.floor(timeSeconds / 60);
+            const seconds = timeSeconds % 60;
+            document.getElementById('time').textContent = 
+                `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            // Меняем цвет таймера
+            const colors = ['lime', 'red', 'yellow', 'cyan', 'magenta'];
+            document.getElementById('timer').style.borderColor = colors[timeSeconds % colors.length];
+        }, 1000);
+        
+        // Большой счётчик
+        setInterval(() => {
+            bigCounter++;
+            document.getElementById('bigCounter').textContent = bigCounter;
+            document.getElementById('bigCounter').style.transform = `rotate(${bigCounter * 5}deg) scale(${1 + Math.sin(bigCounter / 10)})`;
+        }, 50);
+        
+        function incrementBigCounter() {
+            bigCounter += 1000;
+            document.getElementById('bigCounter').textContent = bigCounter;
+            createFloatingText('+1000!');
+            for (let i = 0; i < 50; i++) {
+                createEmojiRain();
+            }
+        }
+        
+        function submitForm() {
+            alert('🎉 ФОРМА ОТПРАВЛЕНА! 🎉\n\n(На самом деле нет, это просто говносайт 😄)');
+            document.body.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+            createFloatingText('ОТПРАВЛЕНО!');
+        }
+        
+        function createFloatingText(text) {
+            const floating = document.createElement('div');
+            floating.className = 'floating-text';
+            floating.textContent = text;
+            floating.style.left = Math.random() * window.innerWidth + 'px';
+            floating.style.top = Math.random() * window.innerHeight + 'px';
+            document.body.appendChild(floating);
+            
+            setTimeout(() => {
+                floating.style.transition = 'all 2s';
+                floating.style.opacity = '0';
+                floating.style.transform = 'translateY(-200px) scale(2)';
+                setTimeout(() => floating.remove(), 2000);
+            }, 100);
+        }
+        
+        function createEmojiRain() {
+            const emojis = ['🎉', '⭐', '💥', '🔥', '✨', '🎊', '💫', '🌟'];
+            const emoji = document.createElement('div');
+            emoji.className = 'emoji-rain';
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.left = Math.random() * window.innerWidth + 'px';
+            emoji.style.top = '-50px';
+            document.body.appendChild(emoji);
+            
+            const duration = 3000 + Math.random() * 2000;
+            const endLeft = Math.random() * window.innerWidth;
+            
+            setTimeout(() => {
+                emoji.style.transition = `all ${duration}ms linear`;
+                emoji.style.top = window.innerHeight + 'px';
+                emoji.style.left = endLeft + 'px';
+                emoji.style.transform = `rotate(${360 * 5}deg)`;
+                setTimeout(() => emoji.remove(), duration);
+            }, 10);
+        }
+        
+        // Создаём эмодзи-дождь при скролле
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            if (window.scrollY - lastScroll > 100) {
+                createEmojiRain();
+                lastScroll = window.scrollY;
+            }
+        });
+        
+        // Клик по странице создаёт эффект
+        document.addEventListener('click', (e) => {
+            createFloatingText('CLICK!');
+            for (let i = 0; i < 10; i++) {
+                createEmojiRain();
+            }
+        });
+        
+        // Периодические всплывающие тексты
+        setInterval(() => {
+            const messages = ['WOW!', 'COOL!', 'EPIC!', 'AMAZING!', 'INCREDIBLE!'];
+            createFloatingText(messages[Math.floor(Math.random() * messages.length)]);
+        }, 3000);
+        
+        // Периодический эмодзи-дождь
+        setInterval(() => {
+            createEmojiRain();
+        }, 500);
+        
+        // Меняем фон при взаимодействии
+        document.addEventListener('mousemove', (e) => {
+            const hue = (e.clientX / window.innerWidth) * 360;
+            document.body.style.filter = `hue-rotate(${hue}deg)`;
+        });
+        
+        // Консольные сообщения
+        console.log('%c🔥 ВТОРАЯ СТРАНИЦА ЗАГРУЖЕНА! 🔥', 'font-size: 30px; color: red; font-weight: bold;');
+        console.log('%cЭта страница ещё хуже первой!', 'font-size: 20px; color: orange;');
+        console.log('%c...и это хорошо! 😄', 'font-size: 16px; color: lime;');
+    </script>
+</body>
+</html>
+

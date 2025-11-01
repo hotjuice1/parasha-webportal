@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать!!!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive, sans-serif;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+            background-size: 400% 400%;
+            animation: rainbow 2s ease infinite;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="red"/></svg>'), auto;
+        }
+        
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .blink {
+            animation: blink 0.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .rotate {
+            animation: rotate 1s linear infinite;
+            display: inline-block;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .bounce {
+            animation: bounce 0.5s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+        
+        .wiggle {
+            animation: wiggle 0.3s infinite;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        
+        .pulse {
+            animation: pulse 0.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        .wave {
+            animation: wave 1s ease-in-out infinite;
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(15deg); }
+            75% { transform: rotate(-15deg); }
+        }
+        
+        header {
+            background: lime;
+            padding: 50px;
+            text-align: center;
+            border: 10px dashed red;
+        }
+        
+        h1 {
+            font-size: 72px;
+            color: yellow;
+            text-shadow: 5px 5px 0px red, -5px -5px 0px blue;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+        }
+        
+        .marquee {
+            background: #000;
+            color: lime;
+            padding: 20px;
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border: 5px solid yellow;
+        }
+        
+        .marquee-text {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+        }
+        
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        
+        .content {
+            padding: 30px;
+            font-size: 20px;
+            line-height: 3;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+        
+        .button {
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+            padding: 30px 60px;
+            font-size: 32px;
+            border: 8px double black;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            text-shadow: 3px 3px 0px black;
+            transition: all 0.1s;
+        }
+        
+        .button:hover {
+            transform: scale(2) rotate(180deg);
+            filter: hue-rotate(90deg);
+        }
+        
+        .rainbow-text {
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        
+        .counter {
+            font-size: 100px;
+            color: red;
+            text-align: center;
+            padding: 50px;
+            border: 20px groove purple;
+            background: black;
+            margin: 20px;
+        }
+        
+        .spinning-images {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .spinning-images img {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 10px ridge yellow;
+        }
+        
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: yellow;
+            padding: 50px;
+            border: 15px solid red;
+            z-index: 9999;
+            font-size: 24px;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        }
+        
+        .cursor-trail {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+        }
+        
+        .scrolling-text {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255,0,0,0.8);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            z-index: 9997;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        table td, table th {
+            border: 5px solid magenta;
+            padding: 20px;
+            background: cyan;
+            color: black;
+            font-size: 24px;
+        }
+        
+        .firework {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9996;
+        }
+        
+        select, input {
+            font-size: 30px;
+            padding: 20px;
+            background: pink;
+            color: blue;
+            border: 5px solid green;
+        }
+        
+        .navigation {
+            background: linear-gradient(to right, lime, cyan, magenta, yellow);
+            padding: 30px;
+            text-align: center;
+            border-top: 10px solid red;
+            border-bottom: 10px solid blue;
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+        }
+        
+        .nav-link {
+            display: inline-block;
+            padding: 20px 40px;
+            margin: 0 10px;
+            background: black;
+            color: lime;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+            border: 5px solid yellow;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            transform: rotate(360deg) scale(2);
+            background: white;
+            color: black;
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="1.html" class="nav-link blink">ГЛАВНАЯ</a>
+        <a href="2.html" class="nav-link pulse">СТРАНИЦА 2</a>
+        <a href="3.html" class="nav-link wave">ФИНАЛ!</a>
+    </div>
+    
+    <div class="scrolling-text">
+        ⚠️ ВНИМАНИЕ! ВЫ ПОПАЛИ НА САМЫЙ ЛУЧШИЙ САЙТ В ИНТЕРНЕТЕ! ⚠️
+    </div>
+    
+    <header>
+        <h1 class="blink bounce wiggle">
+            <span class="rotate">🌟</span>
+            ДОБРО ПОЖАЛОВАТЬ!
+            <span class="rotate">🌟</span>
+        </h1>
+        <div class="rainbow-text">
+            ЭТО НЕ ФЕЙК! ЭТО РЕАЛЬНОСТЬ!
+        </div>
+    </header>
+    
+    <div class="marquee">
+        <div class="marquee-text">
+            🔥🔥🔥 САЙТ РАБОТАЕТ! САЙТ РАБОТАЕТ! САЙТ РАБОТАЕТ! НЕ ВЫКЛЮЧАЙТЕ КОМПЬЮТЕР! 🔥🔥🔥
+        </div>
+    </div>
+    
+    <div class="content">
+        <p class="wiggle">Этот сайт создан с использованием новейших технологий 1995 года!</p>
+        <p class="bounce">Все тексты здесь написаны профессионалами!</p>
+        <p class="blink">Ваш компьютер не сломался, это просто дизайн!</p>
+        
+        <div class="counter" id="counter">0</div>
+        
+        <div style="text-align: center;">
+            <button class="button wiggle" onclick="clickMe()">
+                НАЖМИ МЕНЯ!
+            </button>
+            <button class="button bounce" onclick="showPopup()">
+                ЕЩЕ КНОПКА!
+            </button>
+            <button class="button rotate" onclick="playSound()">
+                МУЗЫКА!
+            </button>
+        </div>
+        
+        <div class="spinning-images">
+            <img src="https://via.placeholder.com/200x200/ff00ff/ffffff?text=WOW" alt="spinning" class="rotate">
+            <img src="https://via.placeholder.com/200x200/00ffff/000000?text=COOL" alt="spinning" class="rotate">
+            <img src="https://via.placeholder.com/200x200/ffff00/000000?text=EPIC" alt="spinning" class="rotate">
+        </div>
+        
+        <table>
+            <tr>
+                <th class="blink">ПРИЧИНА 1</th>
+                <th class="blink">ПРИЧИНА 2</th>
+                <th class="blink">ПРИЧИНА 3</th>
+            </tr>
+            <tr class="bounce">
+                <td>ПОТОМУ ЧТО</td>
+                <td>МОЖНО</td>
+                <td>ДА!</td>
+            </tr>
+        </table>
+        
+        <select onchange="alert('Вы выбрали: ' + this.value)">
+            <option>Выберите что-то</option>
+            <option>Вариант 1</option>
+            <option>Вариант 2</option>
+            <option>Вариант 3</option>
+        </select>
+        
+        <input type="text" placeholder="Введите что-то здесь" style="width: 100%; margin-top: 20px;" onkeypress="createFirework(event)">
+    </div>
+    
+    <div id="popup" class="popup" style="display: none;">
+        <h2 class="blink">ПОЗДРАВЛЯЮ!</h2>
+        <p>Вы получили приз!</p>
+        <p>Но его нет 😢</p>
+        <button class="button" onclick="closePopup()">ЗАКРЫТЬ</button>
+    </div>
+    
+    <script>
+        let counter = 0;
+        const counterElement = document.getElementById('counter');
+        
+        setInterval(() => {
+            counter++;
+            counterElement.textContent = counter;
+            counterElement.style.transform = `rotate(${counter * 10}deg) scale(${1 + Math.sin(counter) * 0.5})`;
+        }, 100);
+        
+        function clickMe() {
+            alert('ВЫ НАЖАЛИ НА КНОПКУ! 🎉🎉🎉');
+            document.body.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+            createFirework({clientX: Math.random() * window.innerWidth, clientY: Math.random() * window.innerHeight});
+        }
+        
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('popup').style.display = 'none';
+            }, 5000);
+        }
+        
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+        
+        function playSound() {
+            const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBi+H0vPTgjMGHm7A7+OZVA4NU6zm77FdGAc');
+            audio.play().catch(() => {
+                alert('🔊 ЗВУК! (ваш браузер не поддерживает автоматическое воспроизведение)');
+            });
+        }
+        
+        document.addEventListener('mousemove', (e) => {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = e.clientX + 'px';
+            trail.style.top = e.clientY + 'px';
+            document.body.appendChild(trail);
+            
+            setTimeout(() => {
+                trail.style.transition = 'all 1s';
+                trail.style.opacity = '0';
+                trail.style.transform = 'scale(5)';
+                setTimeout(() => trail.remove(), 1000);
+            }, 100);
+        });
+        
+        function createFirework(e) {
+            for (let i = 0; i < 20; i++) {
+                const fw = document.createElement('div');
+                fw.className = 'firework';
+                const x = e.clientX || Math.random() * window.innerWidth;
+                const y = e.clientY || Math.random() * window.innerHeight;
+                fw.style.left = x + 'px';
+                fw.style.top = y + 'px';
+                fw.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                document.body.appendChild(fw);
+                
+                const angle = (Math.PI * 2 * i) / 20;
+                const distance = 100 + Math.random() * 100;
+                const targetX = x + Math.cos(angle) * distance;
+                const targetY = y + Math.sin(angle) * distance;
+                
+                setTimeout(() => {
+                    fw.style.transition = 'all 1s';
+                    fw.style.left = targetX + 'px';
+                    fw.style.top = targetY + 'px';
+                    fw.style.opacity = '0';
+                    setTimeout(() => fw.remove(), 1000);
+                }, 10);
+            }
+        }
+        
+        setInterval(() => {
+            const randomEl = document.querySelectorAll('p, div, button');
+            const random = randomEl[Math.floor(Math.random() * randomEl.length)];
+            if (random) {
+                random.style.background = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+                setTimeout(() => {
+                    random.style.background = '';
+                }, 500);
+            }
+        }, 2000);
+        
+        document.addEventListener('click', (e) => {
+            createFirework(e);
+        });
+        
+        window.addEventListener('scroll', () => {
+            document.body.style.backgroundPosition = `${window.scrollY}px ${window.scrollY}px`;
+        });
+        
+        console.log('%cСТОП!', 'font-size: 50px; color: red;');
+        console.log('%cЭто консоль браузера!', 'font-size: 20px;');
+        console.log('%cНе копируйте сюда ничего, что вам говорят!', 'font-size: 16px; color: orange;');
+    </script>
+</body>
+</html>
+
